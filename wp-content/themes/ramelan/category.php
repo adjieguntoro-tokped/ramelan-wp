@@ -15,9 +15,11 @@
       while ( have_posts() ) : the_post(); ?>
       <div class="section-post-list mt-4">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <!-- <img class="card-img-left feature-list-image flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
-            src="http://ramelan.com/data/ramelan/img/1Med.jpg" data-holder-rendered="true" style="width: 196px; height: 100%;"> -->
-          <?php the_post_thumbnail('medium', array('class' => 'card-img-left feature-list-image flex-auto d-none d-md-block')); ?>       
+        <?php if (has_post_thumbnail()):?>
+        <div class="post-list-img-holder">
+          <?php the_post_thumbnail('large', array('class' => 'card-img-left feature-list-image flex-auto d-none d-md-block')); ?> 
+        </div>
+      <?php endif;?>      
           <div class="card-body d-flex flex-column align-items-start">
             <span class="d-inline-block mb-0 category-post">
               <?php $cat = get_the_category() ;?>

@@ -41,4 +41,11 @@ function register_menus(){
 
 add_action('init', 'register_menus');
 
+/* Commment Form */
+
+comment_form(array(
+  'label_submit' => __('Post my Comment', 'ramelan'),
+  'title_reply' => __('Have something to say?', 'ramelan'),
+));
+
 ?>
