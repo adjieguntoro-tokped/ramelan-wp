@@ -86,7 +86,7 @@
     // print_r($categories);
   ?>
   <?php foreach($categories as $cat): ;?>
-    <?php if($loop === 3): break;?>
+    <?php if($loop === 1): break;?>
     <?php endif;?>
     <div class="col-md-12">
       <div class="section-title p-2 row">
